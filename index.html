@@ -2,12 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Crystal Clear | Zero Maintenance Water Softener</title>
     <meta
       name="description"
       content="Crystal Clear Zero Maintenance Water Softener offers eco-friendly, chemical-free water treatment for homes, apartments, hotels, industries, and commercial spaces in Bengaluru."
     />
+    <meta name="theme-color" content="#0e6783" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Crystal Clear" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
     <script>
       document.documentElement.classList.add("js");
     </script>
@@ -28,14 +36,31 @@
             <span>Crystal Clear</span>
           </a>
 
-          <nav class="nav-links" aria-label="Primary">
-            <a href="#benefits">Benefits</a>
-            <a href="#technology">Technology</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact</a>
-          </nav>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-panel"
+            aria-label="Toggle navigation"
+          >
+            <span class="menu-toggle-lines" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span class="menu-toggle-text">Menu</span>
+          </button>
 
-          <a class="nav-cta" href="tel:+917892045190">Call Now</a>
+          <div class="nav-panel" id="nav-panel">
+            <nav class="nav-links" aria-label="Primary">
+              <a href="#benefits">Benefits</a>
+              <a href="#technology">Technology</a>
+              <a href="#reviews">Reviews</a>
+              <a href="#contact">Contact</a>
+            </nav>
+
+            <a class="nav-cta" href="tel:+917892045190">Call Now</a>
+          </div>
         </div>
       </header>
 
@@ -372,11 +397,28 @@
               <form class="enquiry-form" id="enquiry-form">
                 <label>
                   Name
-                  <input id="name" name="name" type="text" placeholder="Your name" required />
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    enterkeyhint="next"
+                    required
+                  />
                 </label>
                 <label>
                   Phone
-                  <input id="phone" name="phone" type="tel" placeholder="Your phone number" required />
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="Your phone number"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    enterkeyhint="next"
+                    required
+                  />
                 </label>
                 <label>
                   Requirement
@@ -385,6 +427,7 @@
                     name="message"
                     rows="4"
                     placeholder="Tell us about your property or water problem"
+                    enterkeyhint="send"
                     required
                   ></textarea>
                 </label>
@@ -397,6 +440,18 @@
           </div>
         </section>
       </main>
+
+      <div class="mobile-dock" aria-label="Quick actions">
+        <a href="tel:+917892045190">Call</a>
+        <a href="https://wa.me/917892045190" target="_blank" rel="noreferrer">WhatsApp</a>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=No.32%2C+DLF+Main+Road%2C+Akashaya+Nagar%2C+Bengaluru+560068"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Directions
+        </a>
+      </div>
 
       <footer class="site-footer">
         <div class="wrap footer-row">
