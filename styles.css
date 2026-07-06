@@ -540,10 +540,16 @@ h3 {
 
 .section-head {
   display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
   margin-bottom: 28px;
+}
+
+.review-head {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .process-grid {
