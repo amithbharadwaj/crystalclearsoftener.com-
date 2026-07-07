@@ -475,6 +475,34 @@ h3 {
   overflow: hidden;
 }
 
+@media (max-width: 900px) {
+  .media-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .media-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .media-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-video-card {
+    min-height: auto;
+  }
+
+  .media-video-card video {
+    min-height: 220px;
+  }
+}
+
 .media-video-card {
   min-height: 320px;
 }
@@ -1006,16 +1034,20 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .gallery-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
+  .gallery-grid,
   .videos-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .review-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-grid,
+  .videos-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero-visual {
